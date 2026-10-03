@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2026 at 05:46 PM
+-- Generation Time: Oct 03, 2026 at 06:04 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,19 +56,22 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `full_name` varchar(100) NOT NULL,
-  `created_at` datetime NOT NULL
+  `created_at` datetime NOT NULL,
+  `avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `full_name`, `created_at`) VALUES
-(1, 'admin_john', 'John Doe', '2026-10-02 23:24:44'),
-(2, 'cash_jane', 'Jane Smith', '2026-10-02 23:24:44'),
-(3, 'stock_mark', 'Mark Lee', '2026-10-02 23:24:44'),
-(4, 'admin_sarah', 'Sarah Connor', '2026-10-02 23:24:44'),
-(5, 'cash_tom', 'Tom Hardy', '2026-10-02 23:24:44');
+INSERT INTO `users` (`id`, `username`, `full_name`, `created_at`, `avatar`) VALUES
+(1, 'admin_john', 'John Wick', '2026-10-02 23:24:44', '1791043191_0f2fc66e07c3d127a65d.jpg'),
+(2, 'cash_jane', 'Jane Smith', '2026-10-02 23:24:44', NULL),
+(3, 'stock_mark', 'Mark Lee', '2026-10-02 23:24:44', NULL),
+(4, 'admin_sarah', 'Sarah Connor', '2026-10-02 23:24:44', NULL),
+(5, 'cash_tom', 'Tom Hardy', '2026-10-02 23:24:44', NULL),
+(6, 'batungbakalbatubalani', 'Aaron Rey Castro', '0000-00-00 00:00:00', '1791043112_786b74dc3f06db12e258.jpg'),
+(7, 'wdqweasd', 'asdasdasd', '0000-00-00 00:00:00', NULL);
 
 --
 -- Indexes for dumped tables
@@ -101,7 +104,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
