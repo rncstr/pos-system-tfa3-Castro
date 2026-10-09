@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 03, 2026 at 06:04 PM
+-- Generation Time: Oct 09, 2026 at 06:18 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -57,21 +57,22 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `full_name` varchar(100) NOT NULL,
   `created_at` datetime NOT NULL,
-  `avatar` varchar(255) DEFAULT NULL
+  `avatar` varchar(255) DEFAULT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `full_name`, `created_at`, `avatar`) VALUES
-(1, 'admin_john', 'John Wick', '2026-10-02 23:24:44', '1791043191_0f2fc66e07c3d127a65d.jpg'),
-(2, 'cash_jane', 'Jane Smith', '2026-10-02 23:24:44', NULL),
-(3, 'stock_mark', 'Mark Lee', '2026-10-02 23:24:44', NULL),
-(4, 'admin_sarah', 'Sarah Connor', '2026-10-02 23:24:44', NULL),
-(5, 'cash_tom', 'Tom Hardy', '2026-10-02 23:24:44', NULL),
-(6, 'batungbakalbatubalani', 'Aaron Rey Castro', '0000-00-00 00:00:00', '1791043112_786b74dc3f06db12e258.jpg'),
-(7, 'wdqweasd', 'asdasdasd', '0000-00-00 00:00:00', NULL);
+INSERT INTO `users` (`id`, `username`, `full_name`, `created_at`, `avatar`, `password`) VALUES
+(1, 'admin_john', 'John Wick', '2026-10-02 23:24:44', '1791043191_0f2fc66e07c3d127a65d.jpg', '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e'),
+(2, 'cash_jane', 'Jane Smith', '2026-10-02 23:24:44', NULL, '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e'),
+(3, 'stock_mark', 'Mark Lee', '2026-10-02 23:24:44', NULL, '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e'),
+(4, 'admin_sarah', 'Sarah Connor', '2026-10-02 23:24:44', NULL, '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e'),
+(5, 'cash_tom', 'Tom Hardy', '2026-10-02 23:24:44', NULL, '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e'),
+(6, 'batungbakalbatubalani', 'Aaron Rey Castro', '0000-00-00 00:00:00', '1791043112_786b74dc3f06db12e258.jpg', '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e'),
+(7, 'wdqweasd', 'asdasdasd', '0000-00-00 00:00:00', NULL, '$2y$10$wTfD.m4G/d7/8W1j/3/G.eu01uUe4b17wV9dI21yX6JcE9X5xR5.e');
 
 --
 -- Indexes for dumped tables
